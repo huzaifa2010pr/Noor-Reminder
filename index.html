@@ -1,20 +1,158 @@
-<!DOCTYPE html>
+      <!DOCTYPE html>
 <html lang="bn">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Noor Reminder — প্রতিদিনের ইসলামী স্মরণ</title>
+  <title>Noor Reminder — ইসলামিক রিমাইন্ডার</title>
 
   <meta name="description"
-        content="Noor Reminder — ইসলামিক reminder, দোয়া, কুরআন ও নেক আমলের স্মরণ।">
+        content="Noor Reminder — কুরআন, দোয়া, ইসলামিক রিমাইন্ডার ও নেক আমলের সুন্দর স্মরণ।">
 
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* =========================
+       Islamic Posts
+    ========================= */
+
+    .posts-section {
+      padding: 80px 6%;
+      background: #f6f8f4;
+    }
+
+    .posts-intro {
+      max-width: 700px;
+      margin: -15px auto 40px;
+      text-align: center;
+      color: #66776f;
+    }
+
+    .posts-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .post-card {
+      background: #ffffff;
+      border: 1px solid #e2ebe6;
+      border-radius: 20px;
+      padding: 28px 24px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+
+    .post-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 35px rgba(0,0,0,0.08);
+    }
+
+    .post-number {
+      display: inline-block;
+      background: #e7f4ed;
+      color: #147a59;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .post-card h3 {
+      font-size: 21px;
+      color: #19352b;
+      margin-bottom: 12px;
+    }
+
+    .post-card p {
+      color: #64756e;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .reference {
+      margin-top: 16px;
+      padding-top: 12px;
+      border-top: 1px solid #edf1ee;
+      color: #147a59 !important;
+      font-size: 13px !important;
+      font-weight: 700;
+    }
+
+    .featured-post {
+      background: #eaf5ef;
+      border: 1px solid #cfe5d9;
+    }
+
+    /* =========================
+       Quick Links
+    ========================= */
+
+    .quick-links {
+      max-width: 1000px;
+      margin: 45px auto 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .quick-link {
+      background: #ffffff;
+      padding: 18px;
+      text-align: center;
+      border-radius: 14px;
+      color: #19352b;
+      font-weight: 700;
+      border: 1px solid #e2ebe6;
+    }
+
+    .quick-link:hover {
+      color: #147a59;
+    }
+
+    /* =========================
+       Responsive
+    ========================= */
+
+    @media (max-width: 900px) {
+      .posts-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .quick-links {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .posts-section {
+        padding: 60px 5%;
+      }
+
+      .posts-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-links {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .post-card {
+        padding: 24px 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- Header -->
+  <!-- =========================
+       Header
+  ========================== -->
+
   <header class="header">
 
     <div class="logo">
@@ -22,10 +160,13 @@
       Noor Reminder
     </div>
 
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Menu">
+      ☰
+    </button>
 
     <nav id="nav">
       <a href="#home">হোম</a>
+      <a href="#posts">কনটেন্ট</a>
       <a href="#reminder">Reminder</a>
       <a href="#dua">দোয়া</a>
       <a href="#tasbih">তাসবিহ</a>
@@ -35,7 +176,10 @@
   </header>
 
 
-  <!-- Hero -->
+  <!-- =========================
+       Hero
+  ========================== -->
+
   <main>
 
     <section id="home" class="hero">
@@ -50,12 +194,12 @@
         </h1>
 
         <p class="hero-text">
-          কিছু মুহূর্ত আল্লাহর স্মরণে কাটান।
-          ছোট একটি ভালো কাজও হতে পারে আপনার দিনের সুন্দর শুরু।
+          কুরআন, দোয়া ও ভালো কাজের ছোট ছোট স্মরণ
+          দিয়ে প্রতিদিনকে আরও সুন্দর করার চেষ্টা।
         </p>
 
-        <a href="#reminder" class="main-btn">
-          আজকের Reminder →
+        <a href="#posts" class="main-btn">
+          ইসলামিক কনটেন্ট দেখুন →
         </a>
 
       </div>
@@ -67,7 +211,372 @@
     </section>
 
 
-    <!-- Daily Reminder -->
+    <!-- =========================
+         Islamic Posts
+    ========================== -->
+
+    <section id="posts" class="posts-section">
+
+      <div class="section-title">
+        <span>✦</span>
+        <h2>ইসলামিক কনটেন্ট</h2>
+        <span>✦</span>
+      </div>
+
+      <p class="posts-intro">
+        প্রতিদিন একটি সুন্দর reminder পড়ুন এবং
+        নিজের জীবনে ভালো কাজ করার চেষ্টা করুন।
+      </p>
+
+
+      <div class="posts-grid">
+
+
+        <!-- Post 01 -->
+
+        <article class="post-card featured-post">
+
+          <span class="post-number">পোস্ট ০১</span>
+
+          <h3>🌙 আল্লাহর স্মরণে অন্তর প্রশান্ত হয়</h3>
+
+          <p>
+            জীবনের ব্যস্ততার মাঝেও আল্লাহকে স্মরণ করার জন্য
+            কিছু সময় রাখুন। নামাজ, দোয়া ও যিকিরের মাধ্যমে
+            নিজের অন্তরকে আল্লাহর দিকে ফিরিয়ে আনার চেষ্টা করুন।
+          </p>
+
+          <p class="reference">
+            📖 কুরআন: সূরা আর-রাদ ১৩:২৮
+          </p>
+
+        </article>
+
+
+        <!-- Post 02 -->
+
+        <article class="post-card">
+
+          <span class="post-number">পোস্ট ০২</span>
+
+          <h3>🤲 দোয়া করতে ভুলবেন না</h3>
+
+          <p>
+            আপনার ছোট-বড় প্রয়োজন আল্লাহর কাছে বলুন।
+            নিজের জন্য, পরিবার ও অন্য মানুষের জন্যও
+            কল্যাণের দোয়া করুন।
+          </p>
+
+          <p class="reference">
+            📖 কুরআন: সূরা গাফির ৪০:৬০
+          </p>
+
+        </article>
+
+
+        <!-- Post 03 -->
+
+        <article class="post-card">
+
+          <span class="post-number">পোস্ট ০৩</span>
+
+          <h3>📖 কুরআনের সঙ্গে সম্পর্ক রাখুন</h3>
+
+          <p>
+            প্রতিদিন অল্প হলেও কুরআন পড়ার অভ্যাস করার চেষ্টা করুন।
+            শুধু পড়া নয়, অর্থ বোঝা এবং জীবনে শিক্ষা প্রয়োগের
+            চেষ্টাও করুন।
+          </p>
+
+          <p class="reference">
+            📖 কুরআন: সূরা আল-ইসরা ১৭:৯
+          </p>
+
+        </article>
+
+
+        <!-- Post 04 -->
+
+        <article class="post-card">
+
+          <span class="post-number">পোস্ট ০৪</span>
+
+          <h3>🕌 নামাজকে গুরুত্ব দিন</h3>
+
+          <p>
+            নামাজ একজন মুমিনের জীবনের গুরুত্বপূর্ণ ইবাদত।
+            সময়মতো নামাজ আদায় করার অভ্যাস গড়ে তুলুন
+            এবং মনোযোগের সঙ্গে ইবাদত করার চেষ্টা করুন।
+          </p>
+
+          <p class="reference">
+            📖 কুরআন: সূরা আল-বাকারা ২:৪৩
+          </p>
+
+        </article>
+
+
+        <!-- Post 05 -->
+
+        <article class="post-card">
+
+          <span class="post-number">পোস্ট ০৫</span>
+
+          <h3>❤️ বাবা-মায়ের সঙ্গে ভালো ব্যবহার</h3>
+
+          <p>
+            বাবা-মায়ের সঙ্গে নম্রভাবে কথা বলা এবং তাদের
+            সম্মান করা অত্যন্ত গুরুত্বপূর্ণ। তাদের জন্য
+            আল্লাহর কাছে দোয়া করুন।
+          </p>
+
+          <p class="reference">
+            📖 কুরআন: সূরা আল-ইসরা ১৭:২৩–২৪
+          </p>
+
+        </article>
+
+
+        <!-- Post 06 -->
+
+        <article class="post-card">
+
+          <span class="post-number">পোস্ট ০৬</span>
+
+          <h3>🌿 ছোট ভালো কাজকে অবহেলা করবেন না</h3>
+
+          <p>
+            ভালো কাজ ছোট মনে হলেও তা আল্লাহর কাছে মূল্যবান
+            হতে পারে। তাই সুযোগ পেলেই ভালো কিছু করার চেষ্টা করুন।
+          </p>
+
+          <p class="reference">
+            📖 কুরআন: সূরা আয-যিলযাল ৯৯:৭
+          </p>
+
+        </article>
+
+
+        <!-- Post 07 -->
+
+        <article class="post-card">
+
+          <span class="post-number">পোস্ট ০৭</span>
+
+          <h3>🗣️ সুন্দর কথা বলুন</h3>
+
+          <p>
+            কথা বলার আগে ভাবুন। সত্য, ভদ্র ও উপকারী কথা বলার
+            চেষ্টা করুন এবং এমন কথা এড়িয়ে চলুন যা অন্যকে
+            কষ্ট দিতে পারে।
+          </p>
+
+          <p class="reference">
+            📖 কুরআন: সূরা আল-বাকারা ২:৮৩
+          </p>
+
+        </article>
+
+
+        <!-- Post 08 -->
+
+        <article class="post-card">
+
+          <span class="post-number">পোস্ট ০৮</span>
+
+          <h3>🌱 ধৈর্য ধরুন</h3>
+
+          <p>
+            কঠিন সময়ে হতাশ না হয়ে আল্লাহর ওপর ভরসা রাখুন।
+            ধৈর্য, দোয়া ও সঠিক চেষ্টা চালিয়ে যাওয়ার অভ্যাস করুন।
+          </p>
+
+          <p class="reference">
+            📖 কুরআন: সূরা আল-বাকারা ২:১৫৩
+          </p>
+
+        </article>
+
+
+        <!-- Post 09 -->
+
+        <article class="post-card">
+
+          <span class="post-number">পোস্ট ০৯</span>
+
+          <h3>🤝 মানুষের উপকার করুন</h3>
+
+          <p>
+            কাউকে সাহায্য করা, ভালো পরামর্শ দেওয়া,
+            পথ দেখানো কিংবা সুন্দরভাবে কথা বলাও
+            ভালো কাজের অংশ হতে পারে।
+          </p>
+
+          <p class="reference">
+            📖 কুরআন: সূরা আল-মায়িদাহ ৫:২
+          </p>
+
+        </article>
+
+
+        <!-- Post 10 -->
+
+        <article class="post-card">
+
+          <span class="post-number">পোস্ট ১০</span>
+
+          <h3>💚 কৃতজ্ঞ হতে শিখুন</h3>
+
+          <p>
+            জীবনে পাওয়া নিয়ামতগুলো মনে করুন এবং আল্লাহর
+            শুকরিয়া আদায় করুন। কৃতজ্ঞতা আমাদের দৃষ্টিভঙ্গিকে
+            আরও সুন্দর করতে সাহায্য করে।
+          </p>
+
+          <p class="reference">
+            📖 কুরআন: সূরা ইবরাহিম ১৪:৭
+          </p>
+
+        </article>
+
+
+        <!-- Post 11 -->
+
+        <article class="post-card">
+
+          <span class="post-number">পোস্ট ১১</span>
+
+          <h3>🌧️ তওবার দরজা খোলা</h3>
+
+          <p>
+            ভুল হয়ে গেলে আল্লাহর কাছে ক্ষমা চান এবং
+            ভুল থেকে ফিরে আসার চেষ্টা করুন। নিজের সংশোধনের
+            জন্য প্রতিদিন চেষ্টা করা গুরুত্বপূর্ণ।
+          </p>
+
+          <p class="reference">
+            📖 কুরআন: সূরা আয-যুমার ৩৯:৫৩
+          </p>
+
+        </article>
+
+
+        <!-- Post 12 -->
+
+        <article class="post-card">
+
+          <span class="post-number">পোস্ট ১২</span>
+
+          <h3>✨ ভালো নিয়ত করুন</h3>
+
+          <p>
+            কোনো ভালো কাজ করার আগে নিজের নিয়তকে সুন্দর করার
+            চেষ্টা করুন। আল্লাহর সন্তুষ্টির জন্য ভালো কাজ করার
+            অভ্যাস গড়ে তুলুন।
+          </p>
+
+          <p class="reference">
+            🌿 আজকের reminder
+          </p>
+
+        </article>
+
+
+        <!-- Post 13 -->
+
+        <article class="post-card">
+
+          <span class="post-number">পোস্ট ১৩</span>
+
+          <h3>🕊️ ক্ষমা করার চেষ্টা করুন</h3>
+
+          <p>
+            অন্যের ভুলের প্রতিশোধ নেওয়ার বদলে ক্ষমা ও
+            উত্তম আচরণের পথ বেছে নেওয়ার চেষ্টা করুন।
+            ক্ষমা মানুষের হৃদয়কে প্রশান্ত করতে পারে।
+          </p>
+
+          <p class="reference">
+            📖 কুরআন: সূরা আলে ইমরান ৩:১৩৪
+          </p>
+
+        </article>
+
+
+        <!-- Post 14 -->
+
+        <article class="post-card">
+
+          <span class="post-number">পোস্ট ১৪</span>
+
+          <h3>📚 জ্ঞান অর্জনের চেষ্টা করুন</h3>
+
+          <p>
+            উপকারী জ্ঞান শেখার অভ্যাস করুন। ইসলাম সম্পর্কে
+            নির্ভরযোগ্য উৎস থেকে শিখুন এবং যা জানেন তা
+            ভালো কাজে ব্যবহার করার চেষ্টা করুন।
+          </p>
+
+          <p class="reference">
+            📖 কুরআন: সূরা ত্ব-হা ২০:১১৪
+          </p>
+
+        </article>
+
+
+        <!-- Post 15 -->
+
+        <article class="post-card featured-post">
+
+          <span class="post-number">পোস্ট ১৫</span>
+
+          <h3>🌟 আজকের লক্ষ্য: একটি ভালো কাজ</h3>
+
+          <p>
+            আজ এমন একটি ভালো কাজ করার চেষ্টা করুন যার মাধ্যমে
+            অন্য কারও উপকার হবে। ভালো কাজকে অভ্যাসে পরিণত করার
+            চেষ্টা করুন।
+          </p>
+
+          <p class="reference">
+            🤲 আল্লাহ আমাদের নেক আমল করার তাওফিক দিন।
+          </p>
+
+        </article>
+
+
+      </div>
+
+
+      <!-- Quick Links -->
+
+      <div class="quick-links">
+
+        <a class="quick-link" href="#reminder">
+          🌙 Reminder
+        </a>
+
+        <a class="quick-link" href="#dua">
+          🤲 দোয়া
+        </a>
+
+        <a class="quick-link" href="#tasbih">
+          📿 তাসবিহ
+        </a>
+
+        <a class="quick-link" href="#contact">
+          ✉️ Contact
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         Daily Reminder
+    ========================== -->
+
     <section id="reminder" class="section">
 
       <div class="section-title">
@@ -80,11 +589,11 @@
 
         <div class="icon">🤲</div>
 
-        <h3>আল্লাহকে বেশি বেশি স্মরণ করুন</h3>
+        <h3>আল্লাহকে স্মরণ করুন</h3>
 
         <p>
-          ব্যস্ত দিনের মাঝেও কিছু সময় আল্লাহর স্মরণ,
-          দোয়া ও আত্মশুদ্ধির জন্য রাখুন।
+          ব্যস্ত দিনের মাঝেও কিছু সময় আল্লাহর স্মরণ,
+          দোয়া ও আত্মশুদ্ধির জন্য রাখুন।
         </p>
 
         <div class="divider"></div>
@@ -98,7 +607,10 @@
     </section>
 
 
-    <!-- Dua -->
+    <!-- =========================
+         Dua
+    ========================== -->
+
     <section id="dua" class="section dua-section">
 
       <div class="section-title">
@@ -126,41 +638,10 @@
     </section>
 
 
-    <!-- Good Deeds -->
-    <section class="section">
+    <!-- =========================
+         Tasbih
+    ========================== -->
 
-      <div class="section-title">
-        <span>✦</span>
-        <h2>আজকের ছোট আমল</h2>
-        <span>✦</span>
-      </div>
-
-      <div class="deeds">
-
-        <div class="deed-card">
-          <div>📖</div>
-          <h3>কুরআন পড়ুন</h3>
-          <p>আজ কিছু সময় কুরআন পড়ার জন্য রাখুন।</p>
-        </div>
-
-        <div class="deed-card">
-          <div>🤲</div>
-          <h3>দোয়া করুন</h3>
-          <p>নিজের ও অন্যদের জন্য কল্যাণের দোয়া করুন।</p>
-        </div>
-
-        <div class="deed-card">
-          <div>❤️</div>
-          <h3>ভালো কাজ করুন</h3>
-          <p>কাউকে সাহায্য করা বা ভালো কথা বলার চেষ্টা করুন।</p>
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- Tasbih -->
     <section id="tasbih" class="section">
 
       <div class="section-title">
@@ -176,7 +657,7 @@
         <div id="count">0</div>
 
         <button class="tasbih-btn" onclick="increaseCount()">
-          স্মরণ করুন
+          📿 স্মরণ করুন
         </button>
 
         <button class="reset-btn" onclick="resetCount()">
@@ -188,21 +669,27 @@
     </section>
 
 
-    <!-- About -->
+    <!-- =========================
+         About
+    ========================== -->
+
     <section class="about">
 
       <h2>🌙 Noor Reminder</h2>
 
       <p>
         Noor Reminder একটি ছোট্ট উদ্যোগ—
-        প্রতিদিনের জীবনে ভালো কাজ, দোয়া এবং আল্লাহর
-        স্মরণের কথা মনে করিয়ে দেওয়ার জন্য।
+        কুরআন, দোয়া, ভালো কাজ ও আল্লাহর স্মরণের
+        সুন্দর reminder মানুষের কাছে পৌঁছে দেওয়ার জন্য।
       </p>
 
     </section>
 
 
-    <!-- Contact -->
+    <!-- =========================
+         Contact
+    ========================== -->
+
     <section id="contact" class="contact">
 
       <div class="section-title">
@@ -213,7 +700,7 @@
 
       <div class="contact-card">
 
-        <h3>আপনার মতামত আমাদের জানান</h3>
+        <h3>আপনার মতামত জানান</h3>
 
         <p>
           Noor Reminder সম্পর্কে কোনো পরামর্শ,
@@ -234,7 +721,10 @@
   </main>
 
 
-  <!-- Footer -->
+  <!-- =========================
+       Footer
+  ========================== -->
+
   <footer>
 
     <div class="footer-logo">
@@ -242,12 +732,13 @@
     </div>
 
     <p>
-      আল্লাহ আমাদের সবাইকে নেক আমল করার তাওফিক দিন।
+      আল্লাহ আমাদের সবাইকে সঠিক পথে থাকার এবং
+      নেক আমল করার তাওফিক দিন। আমিন।
     </p>
 
     <div class="footer-links">
       <a href="#home">Home</a>
-      <a href="#reminder">Reminder</a>
+      <a href="#posts">কনটেন্ট</a>
       <a href="#dua">Dua</a>
       <a href="#contact">Contact</a>
     </div>
@@ -258,6 +749,8 @@
 
   </footer>
 
+
+  <!-- Existing JavaScript -->
 
   <script src="script.js"></script>
 
