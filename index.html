@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Noor Reminder — ইসলামিক কনটেন্ট</title>
+
+  <meta name="description"
+        content="Noor Reminder — ইসলামিক reminder, কুরআন, দোয়া ও উপকারী ইসলামিক কনটেন্ট।">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+  <a href="#home" class="logo">
+    <span>☾</span> Noor Reminder
+  </a>
+
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+  <nav id="nav">
+    <a href="#home">হোম</a>
+    <a href="#posts">কনটেন্ট</a>
+    <a href="#quran">কুরআন</a>
+    <a href="#dua">দোয়া</a>
+    <a href="#tasbih">তাসবিহ</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section id="home" class="hero">
+
+  <div class="hero-content">
+
+    <p class="small-title">بِسْمِ اللَّهِ</p>
+
+    <h1>
+      প্রতিদিনের জীবনে<br>
+      <span>নূরের স্মরণ</span>
+    </h1>
+
+    <p class="hero-text">
+      কুরআন, দোয়া, ভালো কাজ ও সুন্দর ইসলামিক
+      reminder-এর মাধ্যমে প্রতিদিন কিছু ভালো শেখার চেষ্টা।
+    </p>
+
+    <a href="#posts" class="main-btn">
+      কনটেন্ট দেখুন →
+    </a>
+
+  </div>
+
+  <div class="moon">☾</div>
+
+</section>
+
+
+<!-- SEARCH -->
+
+<section class="search-section">
+
+  <div class="search-box">
+
+    <span>🔎</span>
+
+    <input
+      type="search"
+      id="searchInput"
+      placeholder="ইসলামিক কনটেন্ট খুঁজুন..."
+      oninput="searchPosts()">
+
+  </div>
+
+  <p id="searchMessage"></p>
+
+</section>
+
+
+<!-- POSTS -->
+
+<section id="posts" class="posts-section">
+
+  <div class="section-title">
+    <span>✦</span>
+    <h2>ইসলামিক কনটেন্ট</h2>
+    <span>✦</span>
+  </div>
+
+  <p class="posts-intro">
+    উপকারী কথা পড়ুন, শিখুন এবং ভালো কাজ করার চেষ্টা করুন।
+  </p>
+
+
+  <div id="postsGrid" class="posts-grid">
+
+
+    <article class="post-card">
+
+      <span class="post-number">পোস্ট ০১</span>
+
+      <h3>🌙 আল্লাহর স্মরণ</h3>
+
+      <p>
+        ব্যস্ততার মাঝেও আল্লাহকে স্মরণ করার জন্য কিছু সময়
+        রাখুন। যিকির, দোয়া ও ইবাদতের মাধ্যমে আল্লাহর
+        নৈকট্য লাভের চেষ্টা করুন।
+      </p>
+
+      <p class="reference">
+        📖 সূরা আর-রাদ ১৩:২৮
+      </p>
+
+    </article>
+
+
+    <article class="post-card">
+
+      <span class="post-number">পোস্ট ০২</span>
+
+      <h3>🤲 দোয়া করুন</h3>
+
+      <p>
+        নিজের প্রয়োজন, পরিবার এবং অন্য মানুষের কল্যাণের
+        জন্য আল্লাহর কাছে দোয়া করুন।
+      </p>
+
+      <p class="reference">
+        📖 সূরা গাফির ৪০:৬০
+      </p>
+
+    </article>
+
+
+    <article class="post-card">
+
+      <span class="post-number">পোস্ট ০৩</span>
+
+      <h3>📖 কুরআনের সঙ্গে সম্পর্ক</h3>
+
+      <p>
+        প্রতিদিন কুরআন পড়ার অভ্যাস করুন। পড়ার পাশাপাশি
+        এর অর্থ বোঝা এবং শিক্ষা জীবনে প্রয়োগের চেষ্টা করুন।
+      </p>
+
+      <p class="reference">
+        📖 সূরা আল-ইসরা ১৭:৯
+      </p>
+
+    </article>
+
+
+    <article class="post-card">
+
+      <span class="post-number">পোস্ট ০৪</span>
+
+      <h3>🕌 নামাজের গুরুত্ব</h3>
+
+      <p>
+        নামাজকে জীবনের গুরুত্বপূর্ণ ইবাদত হিসেবে গুরুত্ব দিন
+        এবং সময়মতো নামাজ আদায় করার চেষ্টা করুন।
+      </p>
+
+      <p class="reference">
+        📖 সূরা আল-বাকারা ২:৪৩
+      </p>
+
+    </article>
+
+
+    <article class="post-card">
+
+      <span class="post-number">পোস্ট ০৫</span>
+
+      <h3>❤️ বাবা-মায়ের সম্মান</h3>
+
+      <p>
+        বাবা-মায়ের সঙ্গে সুন্দরভাবে কথা বলুন এবং তাদের
+        সম্মান করুন। তাদের জন্য আল্লাহর কাছে দোয়া করুন।
+      </p>
+
+      <p class="reference">
+        📖 সূরা আল-ইসরা ১৭:২৩–২৪
+      </p>
+
+    </article>
+
+
+    <article class="post-card">
+
+      <span class="post-number">পোস্ট ০৬</span>
+
+      <h3>🌿 ছোট ভালো কাজ</h3>
+
+      <p>
+        কোনো ভালো কাজকে ছোট মনে করবেন না। সুযোগ পেলেই
+        মানুষের উপকার করার চেষ্টা করুন।
+      </p>
+
+      <p class="reference">
+        📖 সূরা আয-যিলযাল ৯৯:৭
+      </p>
+
+    </article>
+
+
+    <article class="post-card">
+
+      <span class="post-number">পোস্ট ০৭</span>
+
+      <h3>🗣️ সুন্দর কথা</h3>
+
+      <p>
+        সত্য, ভদ্র ও উপকারী কথা বলার চেষ্টা করুন।
+        এমন কথা এড়িয়ে চলুন যা অন্যকে কষ্ট দিতে পারে।
+      </p>
+
+      <p class="reference">
+        📖 সূরা আল-বাকারা ২:৮৩
+      </p>
+
+    </article>
+
+
+    <article class="post-card">
+
+      <span class="post-number">পোস্ট ০৮</span>
+
+      <h3>🌱 ধৈর্য ধরুন</h3>
+
+      <p>
+        কঠিন সময়ে আল্লাহর ওপর ভরসা রাখুন এবং দোয়া ও
+        সঠিক চেষ্টা চালিয়ে যান।
+      </p>
+
+      <p class="reference">
+        📖 সূরা আল-বাকারা ২:১৫৩
+      </p>
+
+    </article>
+
+
+    <article class="post-card">
+
+      <span class="post-number">পোস্ট ০৯</span>
+
+      <h3>🤝 মানুষের উপকার</h3>
+
+      <p>
+        কাউকে সাহায্য করা, ভালো পরামর্শ দেওয়া এবং
+        সুন্দর আচরণ করা ভালো কাজের অংশ।
+      </p>
+
+      <p class="reference">
+        📖 সূরা আল-মায়িদাহ ৫:২
+      </p>
+
+    </article>
+
+
+    <article class="post-card">
+
+      <span class="post-number">পোস্ট ১০</span>
+
+      <h3>💚 কৃতজ্ঞতা</h3>
+
+      <p>
+        জীবনের নিয়ামতগুলো স্মরণ করুন এবং আল্লাহর
+        শুকরিয়া আদায় করার চেষ্টা করুন।
+      </p>
+
+      <p class="reference">
+        📖 সূরা ইবরাহিম ১৪:৭
+      </p>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+<!-- QURAN -->
+
+<section id="quran" class="quran-section">
+
+  <div class="section-title">
+    <span>✦</span>
+    <h2>📖 কুরআন বিভাগ</h2>
+    <span>✦</span>
+  </div>
+
+  <p class="quran-intro">
+    কুরআন সম্পর্কে পড়ুন এবং নির্ভরযোগ্য উৎস থেকে
+    আরবি আয়াত ও অনুবাদ যাচাই করে শেখার চেষ্টা করুন।
+  </p>
+
+
+  <div class="quran-grid">
+
+
+    <div class="quran-card">
+
+      <div class="quran-icon">📖</div>
+
+      <h3>সূরা আল-ফাতিহা</h3>
+
+      <p>
+        কুরআনের প্রথম সূরা। এর বিষয়বস্তু ও শিক্ষা
+        বুঝে পড়ার চেষ্টা করুন।
+      </p>
+
+      <a
+        href="https://quran.com/1"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="quran-btn">
+        কুরআন দেখুন →
+      </a>
+
+    </div>
+
+
+    <div class="quran-card">
+
+      <div class="quran-icon">🌙</div>
+
+      <h3>সূরা আল-ইখলাস</h3>
+
+      <p>
+        তাওহিদ ও আল্লাহর একত্বের গুরুত্বপূর্ণ শিক্ষা
+        নিয়ে এই ছোট সূরাটি পড়ুন ও বুঝুন।
+      </p>
+
+      <a
+        href="https://quran.com/112"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="quran-btn">
+        কুরআন দেখুন →
+      </a>
+
+    </div>
+
+
+    <div class="quran-card">
+
+      <div class="quran-icon">🌿</div>
+
+      <h3>সূরা আর-রাদ</h3>
+
+      <p>
+        আল্লাহর স্মরণ এবং অন্তরের প্রশান্তি নিয়ে
+        গুরুত্বপূর্ণ শিক্ষা রয়েছে।
+      </p>
+
+      <a
+        href="https://quran.com/13"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="quran-btn">
+        কুরআন দেখুন →
+      </a>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- DAILY REMINDER -->
+
+<section id="reminder" class="section">
+
+  <div class="section-title">
+    <span>✦</span>
+    <h2>আজকের Reminder</h2>
+    <span>✦</span>
+  </div>
+
+  <div class="reminder-card">
+
+    <div class="icon">🤲</div>
+
+    <h3>আজ একটি ভালো কাজ করুন</h3>
+
+    <p>
+      আজ এমন একটি ভালো কাজ করার চেষ্টা করুন
+      যার মাধ্যমে অন্য কারও উপকার হয়।
+    </p>
+
+    <div class="divider"></div>
+
+    <p class="note">
+      🌿 ভালো কাজকে অভ্যাসে পরিণত করার চেষ্টা করুন।
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- DUA -->
+
+<section id="dua" class="section dua-section">
+
+  <div class="section-title">
+    <span>✦</span>
+    <h2>আজকের দোয়া</h2>
+    <span>✦</span>
+  </div>
+
+  <div class="dua-card">
+
+    <div class="arabic">
+      رَبِّ زِدْنِي عِلْمًا
+    </div>
+
+    <p class="translation">
+      “হে আমার রব, আমার জ্ঞান বৃদ্ধি করুন।”
+    </p>
+
+    <p class="reference">
+      📖 সূরা ত্ব-হা ২০:১১৪
+    </p>
+
+    <button class="copy-btn" onclick="copyDua()">
+      📋 দোয়া কপি করুন
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- TASBIH -->
+
+<section id="tasbih" class="section">
+
+  <div class="section-title">
+    <span>✦</span>
+    <h2>📿 ডিজিটাল তাসবিহ</h2>
+    <span>✦</span>
+  </div>
+
+  <div class="tasbih-card">
+
+    <p>সুবহানাল্লাহ</p>
+
+    <div id="count">0</div>
+
+    <button class="tasbih-btn" onclick="increaseCount()">
+      স্মরণ করুন
+    </button>
+
+    <button class="reset-btn" onclick="resetCount()">
+      Reset
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+  <div class="section-title">
+    <span>✦</span>
+    <h2>Contact Me</h2>
+    <span>✦</span>
+  </div>
+
+  <div class="contact-card">
+
+    <h3>আপনার মতামত জানান</h3>
+
+    <p>
+      Noor Reminder সম্পর্কে কোনো পরামর্শ বা মতামত থাকলে
+      ইমেইলের মাধ্যমে যোগাযোগ করতে পারেন।
+    </p>
+
+    <a
+      class="btn primary"
+      href="mailto:huzaifamd2010@gmail.com">
+      ✉️ Email করুন
+    </a>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+  <div class="footer-logo">
+    ☾ Noor Reminder
+  </div>
+
+  <p>
+    আল্লাহ আমাদের সবাইকে উপকারী জ্ঞান ও নেক আমল করার
+    তাওফিক দিন। আমিন।
+  </p>
+
+  <div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#posts">কনটেন্ট</a>
+    <a href="#quran">Quran</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <p class="copyright">
+    © 2026 Noor Reminder
+  </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
