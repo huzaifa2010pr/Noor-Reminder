@@ -1,0 +1,581 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Sans Bengali", "Segoe UI", Arial, sans-serif;
+  background: #f6f8f4;
+  color: #19352b;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* HEADER */
+
+.header {
+  width: 100%;
+  padding: 15px 7%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 15px rgba(0,0,0,.06);
+}
+
+.logo {
+  color: #146b50;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.logo span {
+  font-size: 30px;
+  margin-right: 5px;
+}
+
+nav {
+  display: flex;
+  gap: 23px;
+}
+
+nav a {
+  color: #29483d;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #15966c;
+}
+
+.menu-btn {
+  display: none;
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+
+/* HERO */
+
+.hero {
+  min-height: 600px;
+  padding: 80px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  background: linear-gradient(135deg,#e9f5ee,#f8fbf7);
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.small-title {
+  color: #16835f;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: clamp(42px,6vw,72px);
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  color: #16835f;
+}
+
+.hero-text {
+  max-width: 560px;
+  color: #587067;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.main-btn {
+  display: inline-block;
+  padding: 14px 25px;
+  background: #147a59;
+  color: #fff;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+.main-btn:hover {
+  background: #0e6147;
+}
+
+.moon {
+  width: 290px;
+  height: 290px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #d8eee3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 185px;
+  color: #147a59;
+}
+
+
+/* SEARCH */
+
+.search-section {
+  padding: 35px 6%;
+  background: #ffffff;
+}
+
+.search-box {
+  max-width: 700px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  background: #f6f8f4;
+  border: 1px solid #dce8e1;
+  border-radius: 15px;
+}
+
+.search-box span {
+  font-size: 21px;
+}
+
+.search-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  color: #19352b;
+}
+
+#searchMessage {
+  text-align: center;
+  margin-top: 12px;
+  color: #65766e;
+}
+
+
+/* GENERAL SECTION */
+
+.section {
+  padding: 80px 7%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.section-title h2 {
+  font-size: 32px;
+}
+
+.section-title span {
+  color: #1a9a70;
+}
+
+
+/* POSTS */
+
+.posts-section {
+  padding: 80px 6%;
+  background: #f6f8f4;
+}
+
+.posts-intro,
+.quran-intro {
+  max-width: 700px;
+  margin: -15px auto 40px;
+  text-align: center;
+  color: #66776f;
+}
+
+.posts-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 22px;
+}
+
+.post-card {
+  background: #fff;
+  border: 1px solid #e2ebe6;
+  border-radius: 20px;
+  padding: 28px 24px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.05);
+  transition: .3s;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+.post-number {
+  display: inline-block;
+  background: #e7f4ed;
+  color: #147a59;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.post-card h3 {
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.post-card p {
+  color: #64756e;
+  font-size: 15px;
+}
+
+.reference {
+  margin-top: 15px;
+  color: #147a59 !important;
+  font-size: 13px !important;
+  font-weight: 700;
+}
+
+
+/* QURAN */
+
+.quran-section {
+  padding: 85px 6%;
+  background: #eaf5ef;
+}
+
+.quran-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 22px;
+}
+
+.quran-card {
+  background: #fff;
+  padding: 32px 25px;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid #dceae2;
+  box-shadow: 0 8px 25px rgba(0,0,0,.05);
+}
+
+.quran-icon {
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+.quran-card h3 {
+  margin-bottom: 10px;
+}
+
+.quran-card p {
+  color: #65766e;
+  margin-bottom: 20px;
+}
+
+.quran-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #147a59;
+  color: #fff;
+  border-radius: 9px;
+  font-weight: 600;
+}
+
+.quran-btn:hover {
+  background: #0e6147;
+}
+
+
+/* REMINDER */
+
+.reminder-card {
+  max-width: 750px;
+  margin: auto;
+  padding: 45px 30px;
+  text-align: center;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.07);
+}
+
+.icon {
+  font-size: 50px;
+}
+
+.reminder-card h3 {
+  font-size: 27px;
+  margin: 10px 0;
+}
+
+.reminder-card p {
+  color: #61746d;
+}
+
+.divider {
+  width: 70px;
+  height: 2px;
+  background: #a6cdbc;
+  margin: 25px auto;
+}
+
+.note {
+  color: #147a59 !important;
+  font-weight: 600;
+}
+
+
+/* DUA */
+
+.dua-section {
+  max-width: 100%;
+  background: #edf7f1;
+}
+
+.dua-card {
+  max-width: 800px;
+  margin: auto;
+  padding: 45px 25px;
+  background: #fff;
+  text-align: center;
+  border-radius: 22px;
+}
+
+.arabic {
+  font-size: 38px;
+  direction: rtl;
+  color: #146b50;
+  margin-bottom: 20px;
+}
+
+.translation {
+  color: #5f716a;
+}
+
+.copy-btn {
+  margin-top: 20px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #147a59;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+
+/* TASBIH */
+
+.tasbih-card {
+  max-width: 450px;
+  margin: auto;
+  padding: 40px 25px;
+  background: #fff;
+  text-align: center;
+  border-radius: 22px;
+  box-shadow: 0 12px 35px rgba(0,0,0,.06);
+}
+
+.tasbih-card p {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+#count {
+  font-size: 70px;
+  font-weight: 800;
+  color: #147a59;
+  margin: 15px;
+}
+
+.tasbih-btn {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background: #147a59;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.reset-btn {
+  margin-top: 12px;
+  padding: 9px 20px;
+  border: 1px solid #c9d9d1;
+  background: #fff;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+
+/* CONTACT */
+
+.contact {
+  padding: 80px 7%;
+  background: #f6f8f4;
+}
+
+.contact-card {
+  max-width: 700px;
+  margin: auto;
+  padding: 45px 30px;
+  text-align: center;
+  background: #fff;
+  border-radius: 22px;
+  border: 1px solid #e3ece7;
+}
+
+.contact-card h3 {
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
+.contact-card p {
+  color: #65766e;
+  margin-bottom: 25px;
+}
+
+.btn.primary {
+  display: inline-block;
+  padding: 13px 24px;
+  background: #147a59;
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  background: #0d2d24;
+  color: #bcd0c8;
+}
+
+.footer-logo {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.footer-links {
+  margin: 20px 0;
+}
+
+.footer-links a {
+  color: #c8ddd5;
+  margin: 0 8px;
+}
+
+.copyright {
+  color: #829b91;
+  font-size: 14px;
+}
+
+
+/* MOBILE */
+
+@media (max-width:900px) {
+
+  .posts-grid,
+  .quran-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+}
+
+@media (max-width:700px) {
+
+  .header {
+    padding: 13px 5%;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,.08);
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .hero {
+    padding: 65px 6%;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+  }
+
+  .moon {
+    width: 190px;
+    height: 190px;
+    font-size: 120px;
+  }
+
+  .posts-grid,
+  .quran-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 60px 5%;
+  }
+
+  .section-title h2 {
+    font-size: 26px;
+  }
+
+  .arabic {
+    font-size: 30px;
+  }
+
+}
